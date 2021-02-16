@@ -1,6 +1,6 @@
 package me.emmetion.staffassist.commands;
 
-import me.emmetion.staffassist.menus.PlayerController;
+import me.emmetion.staffassist.menus.playercontroller.PlayerController;
 import me.emmetion.staffassist.menus.PlayerMenuUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
