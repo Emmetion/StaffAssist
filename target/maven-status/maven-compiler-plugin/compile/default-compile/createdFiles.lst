@@ -1,0 +1,12 @@
+me\emmetion\staffassist\util\Utilities.class
+me\emmetion\staffassist\menus\PlayerMenuUtility.class
+me\emmetion\staffassist\listeners\DeathListener.class
+me\emmetion\staffassist\menus\playercontroller\PlayerController.class
+me\emmetion\staffassist\listeners\MenuListener.class
+me\emmetion\staffassist\listeners\JoinListener.class
+me\emmetion\staffassist\util\DeadInventory.class
+me\emmetion\staffassist\commands\OpenController.class
+me\emmetion\staffassist\util\CommonItems.class
+me\emmetion\staffassist\Main.class
+me\emmetion\staffassist\menus\Menu.class
+me\emmetion\staffassist\menus\playercontroller\RestoreInventory.class

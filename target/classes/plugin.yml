@@ -1,0 +1,8 @@
+name: StaffAssist
+main: me.emmetion.staffassist.Main
+version: 1.0-SNAPSHOT
+api-version: 1.16
+
+commands:
+  opencontroller:
+    description: Open a menu to manage a player and restore an inventory.
