@@ -1,4 +1,4 @@
-package menus;
+package me.emmetion.staffassist.menus;
 
 import org.bukkit.entity.Player;
 
@@ -7,12 +7,10 @@ public class PlayerMenuUtility {
 
     private Player player;
     private Player owner;
-    private String menu;
 
-    public PlayerMenuUtility(Player player, Player owner, String menu){
+    public PlayerMenuUtility(Player player, Player owner){
         this.player = player;
         this.owner = owner;
-        this.menu = menu;
     }
 
 
@@ -30,13 +28,5 @@ public class PlayerMenuUtility {
 
     public void setOwner(Player owner) {
         this.owner = owner;
-    }
-
-    public String getMenu() {
-        return menu;
-    }
-
-    public void setMenu(String menu) {
-        this.menu = menu;
     }
 }
