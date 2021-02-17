@@ -1,7 +1,8 @@
 package me.emmetion.staffassist.menus;
 
-import me.emmetion.staffassist.util.CommonItems;
+import me.emmetion.staffassist.util.Utilities;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -17,7 +18,7 @@ public abstract class Menu implements Listener, InventoryHolder {
 
     protected PlayerMenuUtility playerMenuUtility;
 
-    protected ItemStack FILLER_GLASS = CommonItems.voidItem;
+    protected ItemStack FILLER_GLASS = Utilities.createItem(Material.GRAY_STAINED_GLASS_PANE,"&c",null);
 
     public Menu(PlayerMenuUtility playerMenuUtility){
         this.playerMenuUtility = playerMenuUtility;

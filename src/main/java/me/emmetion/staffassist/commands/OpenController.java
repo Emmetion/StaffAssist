@@ -1,6 +1,6 @@
 package me.emmetion.staffassist.commands;
 
-import me.emmetion.staffassist.menus.playercontroller.PlayerController;
+import me.emmetion.staffassist.menus.playercontroller.PlayerControllerMenu;
 import me.emmetion.staffassist.menus.PlayerMenuUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -30,7 +30,7 @@ public class OpenController implements CommandExecutor {
                         return true;
                     }
 
-                    PlayerController controller = new PlayerController(new PlayerMenuUtility(player, target));
+                    PlayerControllerMenu controller = new PlayerControllerMenu(new PlayerMenuUtility(player, target));
 
                     controller.setTarget(target);
 

@@ -2,7 +2,7 @@ package me.emmetion.staffassist.menus.playercontroller;
 
 import me.emmetion.staffassist.menus.Menu;
 import me.emmetion.staffassist.menus.PlayerMenuUtility;
-import me.emmetion.staffassist.util.CommonItems;
+import me.emmetion.staffassist.util.Utilities;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -11,14 +11,14 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Arrays;
 
-public class PlayerController extends Menu {
+public class PlayerControllerMenu extends Menu {
 
 
     Player target;
 
 
 
-    public PlayerController(PlayerMenuUtility playerMenuUtility) {
+    public PlayerControllerMenu(PlayerMenuUtility playerMenuUtility) {
         super(playerMenuUtility);
     }
 
@@ -46,7 +46,7 @@ public class PlayerController extends Menu {
         }
 
         if (click == 11){
-            new RestoreInventory(playerMenuUtility).open();
+            new RestorableInventoryMenu(playerMenuUtility).open();
         }
 
 
@@ -59,9 +59,12 @@ public class PlayerController extends Menu {
 
     @Override
     public void setMenuItems() {
-        ItemStack kill = CommonItems.cItem(Material.REDSTONE_BLOCK,"&cKill " + target.getName()+"&c?", null);
+        ItemStack kill = Utilities.createItem(Material.REDSTONE_BLOCK, "&cKill " + target.getName() + "&c?", null);
 
-        ItemStack previousInventories = CommonItems.cItem(Material.BEDROCK,"&fPrevious Inventories",null);
+        ItemStack previousInventories = Utilities.createItem(
+                Material.BEDROCK,
+                "&fPrevious Inventories",
+                Arrays.asList("&7Get information on previous deaths like Time, Items, and Cause."));
 
         ItemStack v = FILLER_GLASS;
 

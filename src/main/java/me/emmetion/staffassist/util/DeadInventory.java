@@ -1,6 +1,7 @@
 package me.emmetion.staffassist.util;
 
 import org.bukkit.entity.Player;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.PlayerInventory;
 
@@ -11,8 +12,9 @@ public class DeadInventory {
     Player deadPlayer;
     PlayerInventory deadInventory;
     Date timeStamp;
+    EntityDamageEvent.DamageCause cause;
 
-    public DeadInventory(Player deadPlayer, PlayerInventory deadInventory, Date timeStamp) {
+    public DeadInventory(Player deadPlayer, PlayerInventory deadInventory, Date timeStamp, EntityDamageEvent.DamageCause cause) {
         this.deadPlayer = deadPlayer;
         this.deadInventory = deadInventory;
         this.timeStamp = timeStamp;
@@ -41,5 +43,13 @@ public class DeadInventory {
 
     public void setDeadPlayer(Player deadPlayer) {
         this.deadPlayer = deadPlayer;
+    }
+
+    public EntityDamageEvent.DamageCause getCause() {
+        return cause;
+    }
+
+    public void setCause(EntityDamageEvent.DamageCause cause) {
+        this.cause = cause;
     }
 }

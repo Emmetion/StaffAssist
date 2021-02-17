@@ -1,8 +1,19 @@
 name: StaffAssist
 main: me.emmetion.staffassist.Main
 version: 1.0-SNAPSHOT
+authors: [Emmetion - Developer]
+website: github.com/Emmetion
+description: StaffAssist is designed to help Staff Members in editing data, punishments, and inventories.
 api-version: 1.16
 
 commands:
   opencontroller:
     description: Open a menu to manage a player and restore an inventory.
+    aliases: oc
+    permission: staffassist.controller
+    permission-message: You do not have permission to execute this command.
+
+permissions:
+  staffassist.controller:
+    description: This is a permission to allow users to use /opencontroller <target> or /oc <target>
+    default: op
